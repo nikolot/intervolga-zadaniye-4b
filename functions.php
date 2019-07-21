@@ -15,10 +15,6 @@ function viewTable(){
     
     $conn = mysqli_connect($host, $user, $password, $dbName);
     $res = mysqli_query($conn, "insert into `countries`(`Name`, `Capital`, `Peoples`) VALUES ('".addslashes($_POST['name'])."', ' ".addslashes($_POST['capital'])."', ".((int) $_POST['peoples']).');');
-
-    if (!$res){
-        echo "insert into `countries`(`Name`, `Capital`, `Peoples`) VALUES (`".$_POST['name']."`, ` ".$_POST['capital']."`, ".$_POST['peoples'].');';
-}
     
     $res = mysqli_query($conn, "select * from countries");
 
