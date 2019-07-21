@@ -12,9 +12,6 @@
 </head>
 <body>
 
-<!--<table id="countries"><tr><th>Страна</th><th>Столица</th><th>Численность населения</th></tr>
-    <tr><td>пробная ячейка</td></tr>
-</table>-->
 <form method="post">
 <input name="name">Страна<br>
 <input name="capital">Столица<br>
