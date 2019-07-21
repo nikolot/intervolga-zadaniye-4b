@@ -11,7 +11,7 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
+<!--Ввод данные о стране для добавления в список стран-->
 <form method="post">
 <input name="name">Страна<br>
 <input name="capital">Столица<br>
