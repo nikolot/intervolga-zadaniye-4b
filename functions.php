@@ -5,8 +5,6 @@
     }
 
 function viewTable(){
-    echo $_POST["Name"];
-
     /*Параметры подключения*/
     $host = 'localhost'; 
     $user = 'root'; 
