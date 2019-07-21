@@ -7,10 +7,11 @@
 function viewTable(){
     echo $_POST["Name"];
 
-    $host = 'localhost'; //имя хоста, на локальном компьютере это localhost
-    $user = 'root'; //имя пользователя, по умолчанию это root
-    $password = ''; //пароль, по умолчанию пустой
-    $dbName = 'countries'; //имя базы данных
+    /*Параметры подключения*/
+    $host = 'localhost'; 
+    $user = 'root'; 
+    $password = ''; 
+    $dbName = 'countries'; 
     
     $conn = mysqli_connect($host, $user, $password, $dbName);
     $res = mysqli_query($conn, "insert into `countries`(`Name`, `Capital`, `Peoples`) VALUES ('".addslashes($_POST['name'])."', ' ".addslashes($_POST['capital'])."', ".((int) $_POST['peoples']).');');
@@ -21,6 +22,7 @@ function viewTable(){
     
     $res = mysqli_query($conn, "select * from countries");
 
+    /*Выводим на экран содержимое таблицы стран*/
     echo "<table id='countries'><tr><th>Страна</th><th>Столица</th><th>Численность населения</th></tr>
     <tr>";
     echo "<tr>";
